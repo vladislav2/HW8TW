@@ -15,9 +15,9 @@ class IMTViewController: UIViewController {
     let male = ["Мужской",
                  "Женский"]
     
-    let height = ["100","101","102","103","104","105","106","107","108","109","110","170"]
+    let height = [Int](90...220)
     
-    let weight = [30,60, 65, 70, 75, 80, 85, 90]
+    let weight = [Int](40...150)
     
     @IBOutlet weak var maleTF: UITextField!
     @IBOutlet weak var heightTF: UITextField!
@@ -111,7 +111,7 @@ extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if currentTextField == maleTF {
             return male[row]
         } else if currentTextField == heightTF {
-            return height[row]
+            return String(height[row])
         } else if currentTextField == weightTF {
             return String(weight[row])
         } else {
@@ -124,7 +124,7 @@ extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             maleTF.text = male[row]
             self.view.endEditing(true)
         } else if currentTextField == heightTF {
-            heightTF.text = height[row]
+            heightTF.text = String(height[row])
             self.view.endEditing(true)
         } else if currentTextField == weightTF {
             weightTF.text = String(weight[row])

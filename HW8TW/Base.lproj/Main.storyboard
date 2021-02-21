@@ -106,12 +106,29 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAV-GO-qVK">
+                                        <rect key="frame" x="16" y="16" width="57" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="beP-Ke-Uwg"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="fnT-CH-KbX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Назад">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="o3v-WE-R0Q" kind="unwind" unwindAction="unwindWithSegue:" id="Omc-sT-3Mc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.78824903071080965" green="0.92875871000908006" blue="1" alpha="0.89803921568627454" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="8iq-O0-udK" firstAttribute="centerX" secondItem="LLV-2g-3md" secondAttribute="centerX" id="2q9-dC-Szc"/>
+                                    <constraint firstItem="NAV-GO-qVK" firstAttribute="top" secondItem="LLV-2g-3md" secondAttribute="top" constant="16" id="Bjq-cO-u4n"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NAV-GO-qVK" secondAttribute="trailing" constant="20" symbolic="YES" id="I3h-9P-3HQ"/>
                                     <constraint firstItem="8iq-O0-udK" firstAttribute="top" secondItem="LLV-2g-3md" secondAttribute="top" constant="18" id="Mfj-P7-8XP"/>
                                     <constraint firstAttribute="height" constant="223.5" id="Vte-w3-oaC"/>
+                                    <constraint firstItem="NAV-GO-qVK" firstAttribute="leading" secondItem="LLV-2g-3md" secondAttribute="leading" constant="16" id="tOD-Nu-f0y"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-cx-UA5">
@@ -227,6 +244,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
