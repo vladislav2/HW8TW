@@ -135,6 +135,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="maleTF:" destination="o3v-WE-R0Q" eventType="editingDidEnd" id="fcq-7l-ZaP"/>
+                                                    <outlet property="delegate" destination="UeH-TH-nRy" id="3xo-Y0-s9s"/>
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8le-sS-4N4">
@@ -144,6 +145,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="UeH-TH-nRy" id="VSn-eB-Xe7"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJB-20-xtX">
                                                 <rect key="frame" x="0.0" y="123" width="137" height="41.5"/>
@@ -152,11 +156,18 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="UeH-TH-nRy" id="MFi-5b-uUe"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZD-mH-nr1">
+                                <rect key="frame" x="135" y="454" width="50" height="30"/>
+                                <state key="normal" title="Расчет"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c3D-Dm-3ZD"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -165,7 +176,9 @@
                             <constraint firstItem="LLV-2g-3md" firstAttribute="leading" secondItem="c3D-Dm-3ZD" secondAttribute="leading" id="AbO-ku-9jp"/>
                             <constraint firstItem="c3D-Dm-3ZD" firstAttribute="trailing" secondItem="jEn-cx-UA5" secondAttribute="trailing" constant="16" id="DgP-3Z-3Hi"/>
                             <constraint firstItem="jEn-cx-UA5" firstAttribute="top" secondItem="LLV-2g-3md" secondAttribute="bottom" constant="29" id="E9I-Fq-L9B"/>
+                            <constraint firstItem="nZD-mH-nr1" firstAttribute="centerX" secondItem="JUL-qg-L1c" secondAttribute="centerX" id="HeK-J2-GMZ"/>
                             <constraint firstItem="LLV-2g-3md" firstAttribute="top" secondItem="c3D-Dm-3ZD" secondAttribute="top" id="a36-aj-yoT"/>
+                            <constraint firstItem="nZD-mH-nr1" firstAttribute="top" secondItem="jEn-cx-UA5" secondAttribute="bottom" constant="37" id="aHa-yL-FeQ"/>
                             <constraint firstItem="jEn-cx-UA5" firstAttribute="leading" secondItem="c3D-Dm-3ZD" secondAttribute="leading" constant="16" id="dbi-DA-GI8"/>
                             <constraint firstItem="c3D-Dm-3ZD" firstAttribute="bottom" secondItem="jEn-cx-UA5" secondAttribute="bottom" constant="151" id="we5-nx-rOE"/>
                         </constraints>
