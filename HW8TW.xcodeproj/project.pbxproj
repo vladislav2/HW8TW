@@ -13,6 +13,8 @@
 		CE5EA83F25E26338000E4F99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5EA83D25E26338000E4F99 /* Main.storyboard */; };
 		CE5EA84125E2633C000E4F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5EA84025E2633C000E4F99 /* Assets.xcassets */; };
 		CE5EA84425E2633C000E4F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5EA84225E2633C000E4F99 /* LaunchScreen.storyboard */; };
+		CE5EA84D25E26BBF000E4F99 /* calorieСalculation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5EA84C25E26BBF000E4F99 /* calorieСalculation.storyboard */; };
+		CE5EA85025E26D7B000E4F99 /* CalorieCalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA84F25E26D7B000E4F99 /* CalorieCalculationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CE5EA84025E2633C000E4F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5EA84325E2633C000E4F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5EA84525E2633C000E4F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5EA84C25E26BBF000E4F99 /* calorieСalculation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "calorieСalculation.storyboard"; sourceTree = "<group>"; };
+		CE5EA84F25E26D7B000E4F99 /* CalorieCalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCalculationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				CE5EA83725E26338000E4F99 /* AppDelegate.swift */,
 				CE5EA83925E26338000E4F99 /* SceneDelegate.swift */,
 				CE5EA83B25E26338000E4F99 /* ViewController.swift */,
+				CE5EA84F25E26D7B000E4F99 /* CalorieCalculationViewController.swift */,
+				CE5EA84C25E26BBF000E4F99 /* calorieСalculation.storyboard */,
 				CE5EA83D25E26338000E4F99 /* Main.storyboard */,
 				CE5EA84025E2633C000E4F99 /* Assets.xcassets */,
 				CE5EA84225E2633C000E4F99 /* LaunchScreen.storyboard */,
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5EA84D25E26BBF000E4F99 /* calorieСalculation.storyboard in Resources */,
 				CE5EA84425E2633C000E4F99 /* LaunchScreen.storyboard in Resources */,
 				CE5EA84125E2633C000E4F99 /* Assets.xcassets in Resources */,
 				CE5EA83F25E26338000E4F99 /* Main.storyboard in Resources */,
@@ -139,6 +146,7 @@
 			files = (
 				CE5EA83C25E26338000E4F99 /* ViewController.swift in Sources */,
 				CE5EA83825E26338000E4F99 /* AppDelegate.swift in Sources */,
+				CE5EA85025E26D7B000E4F99 /* CalorieCalculationViewController.swift in Sources */,
 				CE5EA83A25E26338000E4F99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
