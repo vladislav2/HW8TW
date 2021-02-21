@@ -15,53 +15,77 @@ class IMTViewController: UIViewController {
     let male = ["Мужской",
                  "Женский"]
     
-    let height = ["100","101","102","103","104","105","106","107","108","109","110","111"]
+    let height = ["100","101","102","103","104","105","106","107","108","109","110","170"]
     
-    let weight = [60, 65, 70, 75, 80, 85, 90]
+    let weight = [30,60, 65, 70, 75, 80, 85, 90]
     
-    var selectedMale: String?
-                    
     @IBOutlet weak var maleTF: UITextField!
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
+    @IBOutlet weak var viewOutlet: UIView!
+    @IBOutlet weak var resultButtonLabel: UIButton!
+    
+    @IBOutlet weak var imtNumberLabel: UILabel!
+    @IBOutlet weak var imtDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        choiceMale()
-//        createToolbar()
+        resultButtonLabel.layer.cornerRadius = 15
+        imtNumberLabel.isHidden = true
+        imtDescription.isHidden = true
     }
     
-//    func createToolbar () {
-//
-//        let toolbar = UIToolbar()
-//        toolbar.sizeToFit()
-//
-//        let doneButton = UIBarButtonItem(title: "Done",
-//                                         style: .plain,
-//                                         target: self,
-//                                         action: #selector(dismissKeyboard))
-//
-//        toolbar.setItems([doneButton], animated: true)
-//        toolbar.isUserInteractionEnabled = true
-//
-//        maleTF.inputAccessoryView = toolbar
-//
-//    }
-    
-//    @objc func dismissKeyboard() {
-//        view.endEditing(true)
-//    }
+    @IBAction func resultButtonPressed(_ sender: UIButton) {
 
-//    func choiceMale() {
-//        let elementPicker = UIPickerView()
-//        elementPicker.delegate = self
-//        maleTF.inputView = elementPicker
-//
-//        // Costamization
-//
-//        elementPicker.backgroundColor = .clear
-//    }
-    
+guard let heightInt = heightTF.text,
+      let weightInt = weightTF.text,
+        
+      let h = Double(heightInt),
+      let w = Double(weightInt)
+      else { return }
+
+      let imt = w / ((h/100) * (h/100))
+        
+      imtNumberLabel.text = String(format: "%.1f", imt)
+      imtNumberLabel.isHidden = false
+      imtDescription.isHidden = false
+        
+        if maleTF.text == "Мужской" {
+            switch imt {
+            case 0...19:
+                viewOutlet.backgroundColor = .systemTeal
+                imtDescription.text = "У Вас дефицит веса"
+            case 19...25:
+                viewOutlet.backgroundColor = .systemGreen
+                imtDescription.text = "У Вас идеальный вес"
+            case 25...30:
+                viewOutlet.backgroundColor = .systemOrange
+                imtDescription.text = "У Вас избыточный вес"
+            case 31...100:
+                viewOutlet.backgroundColor = .systemRed
+                imtDescription.text = "Вы страдаете ожирением"
+            default:
+                break
+            }
+        } else {
+            switch imt {
+            case 0...18:
+                viewOutlet.backgroundColor = .systemTeal
+                imtDescription.text = "У Вас дефицит веса"
+            case 18...23.8:
+                viewOutlet.backgroundColor = .systemGreen
+                imtDescription.text = "У Вас идеальный вес"
+            case 23.9...28.5:
+                viewOutlet.backgroundColor = .systemOrange
+                imtDescription.text = "У Вас избыточный вес"
+            case 28.5...100:
+                viewOutlet.backgroundColor = .systemRed
+                imtDescription.text = "Вы страдаете ожирением"
+            default:
+                break
+            }
+        }
+    }
 }
 
 extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -71,7 +95,6 @@ extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return male.count
         if currentTextField == maleTF {
             return male.count
         } else if currentTextField == heightTF {
@@ -108,11 +131,7 @@ extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             self.view.endEditing(true)
         }
         
-        
-//        selectedMale = male[row]
-//        maleTF.text = selectedMale
     }
-    
     
 }
 
