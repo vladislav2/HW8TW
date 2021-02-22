@@ -9,42 +9,48 @@ import UIKit
 
 class IMTViewController: UIViewController {
     
-    var currentTextField = UITextField()
-    var pickerView = UIPickerView()
-    
-    let male = ["Мужской",
-                 "Женский"]
-    
-    let height = [Int](90...220)
-    
-    let weight = [Int](40...150)
+    //MARK: - IB Outlets
     
     @IBOutlet weak var maleTF: UITextField!
     @IBOutlet weak var heightTF: UITextField!
     @IBOutlet weak var weightTF: UITextField!
+    
     @IBOutlet weak var viewOutlet: UIView!
     @IBOutlet weak var resultButtonLabel: UIButton!
     
     @IBOutlet weak var imtNumberLabel: UILabel!
     @IBOutlet weak var imtDescription: UILabel!
     
+    //MARK: - Public properties
+    
+    var currentTextField = UITextField()
+    var pickerView = UIPickerView()
+    
+    let male = ["Мужской",
+                 "Женский"]
+    let height = [Int](90...220)
+    let weight = [Int](40...150)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         resultButtonLabel.layer.cornerRadius = 15
         imtNumberLabel.isHidden = true
         imtDescription.isHidden = true
     }
+    
+    //MARK: - IB Actions
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
 
 guard let heightInt = heightTF.text,
       let weightInt = weightTF.text,
         
-      let h = Double(heightInt),
-      let w = Double(weightInt)
+      let height = Double(heightInt),
+      let weight = Double(weightInt)
       else { return }
 
-      let imt = w / ((h/100) * (h/100))
+      let imt = weight / ((height / 100) * (height / 100))
         
       imtNumberLabel.text = String(format: "%.1f", imt)
       imtNumberLabel.isHidden = false
@@ -87,6 +93,8 @@ guard let heightInt = heightTF.text,
         }
     }
 }
+
+//MARK: - UIPicker Settings
 
 extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -134,6 +142,8 @@ extension IMTViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
 }
+
+//MARK: - UITextField Settings
 
 extension IMTViewController: UITextFieldDelegate {
     

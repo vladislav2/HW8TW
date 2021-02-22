@@ -15,12 +15,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
         
-        imtOutlet.layer.cornerRadius = 50
-        kkalOutlet.layer.cornerRadius = 50
+    imtOutlet.layer.cornerRadius = 50
+    kkalOutlet.layer.cornerRadius = 50
+    
   }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {
         }
-
 }
 
