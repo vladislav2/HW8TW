@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Activity: Double {
+enum Activity: Double, CaseIterable {
   case minimal = 1.2
   case low = 1.375
   case middle = 1.55

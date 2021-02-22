@@ -8,7 +8,7 @@
 import UIKit
 
 class CalorieCalculationViewController: UIViewController {
-
+  
   @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
   
   @IBOutlet weak var heightTextField: UITextField!
@@ -21,19 +21,16 @@ class CalorieCalculationViewController: UIViewController {
   
   private var activity = 1.2
   private var result = 0
+  //private let activityPickerList = ["Минимальная", "Низкая", "Средняя", "Высокая", "Очень высокая"]
   
   override func viewDidLoad() {
     super.viewDidLoad()
     addDoneButton(to: heightTextField, weightTextField, ageTextField)
     
   }
-    
-  @IBAction func changeGender(_ sender: UISegmentedControl) {
-    
-  }
   
   @IBAction func activityChangeButton(_ sender: UIButton) {
-    
+    showAlert()
   }
   
   @IBAction func calculateButtonPressed() {
@@ -53,53 +50,39 @@ class CalorieCalculationViewController: UIViewController {
       result = Int(resultFemale * activity)
       resultLabel.text = String(result)
     }
-    
   }
-  
-//  для мужчин: BMR = 88.36 + (13.4 x вес, кг) + (4.8 х рост, см) – (5.7 х возраст, лет)
-//  для женщин: BMR = 447.6 + (9.2 x вес, кг) + (3.1 х рост, cм) – (4.3 х возраст, лет)
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-  
 }
 
 // MARK: - Alert Controller
 
 extension CalorieCalculationViewController {
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            
-        }
-        alert.addAction(okAction)
-        present(alert, animated: true)
+  private func showAlert() {
+    let pickerViewController = UIViewController()
+    pickerViewController.preferredContentSize = CGSize(width: 250.0, height: 120.0)
+    let picker = UIPickerView(frame: CGRect(x: 0.0, y: 0.0, width: 250.0, height: 120.0))
+    picker.delegate = self
+    picker.dataSource = self
+    pickerViewController.view.addSubview(picker)
+    
+    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+    alert.setValue(pickerViewController, forKey: "contentViewController")
+    let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+      self.activityButton.setTitle(Activity.allCases[picker.selectedRow(inComponent: 0)].valueForActivity, for: .normal)
     }
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+    alert.addAction(cancel)
+    alert.addAction(okAction)
+    present(alert, animated: true)
+  }
 }
 
 // MARK: - Work with keyboard
 
 extension CalorieCalculationViewController: UITextFieldDelegate {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == ageTextField {
-          //passwordTextField.becomeFirstResponder()
-        } else {
-          //logInPressed()
-        }
-        return true
-    }
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesBegan(touches, with: event)
+    view.endEditing(true)
+  }
 }
 
 extension CalorieCalculationViewController {
@@ -110,7 +93,6 @@ extension CalorieCalculationViewController {
       keyboardToolBar.sizeToFit()
       
       let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapButton))
-      
       let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
       keyboardToolBar.items = [flexBarButton, doneButton]
     }
@@ -118,5 +100,35 @@ extension CalorieCalculationViewController {
   
   @objc private func didTapButton() {
     view.endEditing(true)
+  }
+}
+
+// MARK: - UIPickerViewDataSource
+
+extension CalorieCalculationViewController: UIPickerViewDataSource {
+  func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 }
+
+  func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    Activity.allCases.count
+  }
+  
+  func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    Activity.allCases[row].valueForActivity
+  }
+}
+ 
+// MARK: - UIPickerViewDelegate
+
+extension CalorieCalculationViewController: UIPickerViewDelegate {
+  func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    switch row {
+    case 1: activity = Activity.low.rawValue
+    case 2: activity = Activity.middle.rawValue
+    case 3: activity = Activity.high.rawValue
+    case 4: activity = Activity.overHigh.rawValue
+    default:
+      activity = Activity.minimal.rawValue
+    }
+    print(activity)
   }
 }

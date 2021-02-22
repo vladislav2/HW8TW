@@ -11,7 +11,7 @@
         <!--Calorie Calculation View Controller-->
         <scene sceneID="6eG-cn-Izx">
             <objects>
-                <viewController id="BMY-cF-0bG" customClass="CalorieCalculationViewController" customModule="HW8TW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calorieStoryboard" id="BMY-cF-0bG" customClass="CalorieCalculationViewController" customModule="HW8TW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXl-gs-02J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,9 +31,6 @@
                                     <segment title="Мужчина"/>
                                     <segment title="Женщина"/>
                                 </segments>
-                                <connections>
-                                    <action selector="changeGender:" destination="BMY-cF-0bG" eventType="valueChanged" id="iL1-27-aP5"/>
-                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bzM-PY-0R7">
                                 <rect key="frame" x="16" y="145" width="343" height="142"/>
