@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
                                         <color key="backgroundColor" red="0.78824903071080965" green="0.92875871000908006" blue="1" alpha="0.89803921568627454" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="184" id="5d5-PJ-acW"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="5d5-PJ-acW"/>
                                             <constraint firstAttribute="height" constant="184" id="gRh-6V-oeC"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
@@ -46,8 +46,14 @@
                                         <state key="normal" title="Базовый метаболизм">
                                             <color key="titleColor" red="0.22425979027379461" green="0.23128219974150666" blue="0.7222141304401436" alpha="0.89803921568627454" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="kiq-Ao-pSb" kind="presentation" modalPresentationStyle="fullScreen" id="yWh-Oc-ArV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="iuf-XW-X8E"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -240,7 +246,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znK-bu-b1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="o3v-WE-R0Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="941.25" y="92.957746478873247"/>
+            <point key="canvasLocation" x="1170" y="-58"/>
+        </scene>
+        <!--CalorieCalculationViewController-->
+        <scene sceneID="FKU-lY-Urr">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="calorieStoryboard" storyboardName="CalorieCalculationViewController" id="kiq-Ao-pSb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qok-Sl-z3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="378"/>
         </scene>
     </scenes>
     <resources>
