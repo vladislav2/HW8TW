@@ -21,7 +21,6 @@ class CalorieCalculationViewController: UIViewController {
   
   private var activity = 1.2
   private var result = 0
-  //private let activityPickerList = ["Минимальная", "Низкая", "Средняя", "Высокая", "Очень высокая"]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,7 +33,7 @@ class CalorieCalculationViewController: UIViewController {
   }
   
   @IBAction func calculateButtonPressed() {
-    
+    resultLabel.text = СalculationManager().calculateСalories(gender: genderSegmentedControl.selectedSegmentIndex, weight: Double(weightTextField.text ?? "1") ?? 1, height: Double(heightTextField.text ?? "1") ?? 1, age: Double(ageTextField.text ?? "1") ?? 1, activity: activity).1
     if genderSegmentedControl.selectedSegmentIndex == 0 {
       let height = Double(heightTextField.text ?? "1") ?? 1
       let weight = Double(weightTextField.text ?? "1") ?? 1
