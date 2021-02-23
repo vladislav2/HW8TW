@@ -47,6 +47,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E45A83325E50E02005E4391 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EA84C25E26BBF000E4F99 /* calorieСalculation.storyboard */,
+				CE5EA84225E2633C000E4F99 /* LaunchScreen.storyboard */,
+				CE5EA83D25E26338000E4F99 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7E45A83425E50E1E005E4391 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EA83B25E26338000E4F99 /* ViewController.swift */,
+				7E631B2C25E2793400580285 /* IMTViewController.swift */,
+				CE5EA84F25E26D7B000E4F99 /* CalorieCalculationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7E45A83625E50E30005E4391 /* Menegers */ = {
+			isa = PBXGroup;
+			children = (
+				CE5EA86025E3ECFE000E4F99 /* СalculationManager.swift */,
+				CE5EA85725E2C7D1000E4F99 /* Enums.swift */,
+			);
+			path = Menegers;
+			sourceTree = "<group>";
+		};
 		CE5EA82B25E26338000E4F99 = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +97,10 @@
 			children = (
 				CE5EA83725E26338000E4F99 /* AppDelegate.swift */,
 				CE5EA83925E26338000E4F99 /* SceneDelegate.swift */,
-				CE5EA83B25E26338000E4F99 /* ViewController.swift */,
-				CE5EA84F25E26D7B000E4F99 /* CalorieCalculationViewController.swift */,
-				CE5EA86025E3ECFE000E4F99 /* СalculationManager.swift */,
-				CE5EA85725E2C7D1000E4F99 /* Enums.swift */,
-				CE5EA84C25E26BBF000E4F99 /* calorieСalculation.storyboard */,
-				CE5EA83D25E26338000E4F99 /* Main.storyboard */,
-				7E631B2C25E2793400580285 /* IMTViewController.swift */,
+				7E45A83625E50E30005E4391 /* Menegers */,
+				7E45A83425E50E1E005E4391 /* ViewControllers */,
+				7E45A83325E50E02005E4391 /* Storyboards */,
 				CE5EA84025E2633C000E4F99 /* Assets.xcassets */,
-				CE5EA84225E2633C000E4F99 /* LaunchScreen.storyboard */,
 				CE5EA84525E2633C000E4F99 /* Info.plist */,
 			);
 			path = HW8TW;
