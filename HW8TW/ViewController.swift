@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
+    @IBOutlet weak var imtOutlet: UIButton!
+    @IBOutlet weak var kkalOutlet: UIButton!
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+        
+    imtOutlet.layer.cornerRadius = 50
+    kkalOutlet.layer.cornerRadius = 50
+    
   }
-
-
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) {
+        }
 }
 

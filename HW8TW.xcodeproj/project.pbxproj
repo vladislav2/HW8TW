@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E631B2D25E2793400580285 /* IMTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E631B2C25E2793400580285 /* IMTViewController.swift */; };
 		CE5EA83825E26338000E4F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA83725E26338000E4F99 /* AppDelegate.swift */; };
 		CE5EA83A25E26338000E4F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA83925E26338000E4F99 /* SceneDelegate.swift */; };
 		CE5EA83C25E26338000E4F99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5EA83B25E26338000E4F99 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E631B2C25E2793400580285 /* IMTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMTViewController.swift; sourceTree = "<group>"; };
 		CE5EA83425E26338000E4F99 /* HW8TW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW8TW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5EA83725E26338000E4F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5EA83925E26338000E4F99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				CE5EA83925E26338000E4F99 /* SceneDelegate.swift */,
 				CE5EA83B25E26338000E4F99 /* ViewController.swift */,
 				CE5EA83D25E26338000E4F99 /* Main.storyboard */,
+				7E631B2C25E2793400580285 /* IMTViewController.swift */,
 				CE5EA84025E2633C000E4F99 /* Assets.xcassets */,
 				CE5EA84225E2633C000E4F99 /* LaunchScreen.storyboard */,
 				CE5EA84525E2633C000E4F99 /* Info.plist */,
@@ -140,6 +143,7 @@
 				CE5EA83C25E26338000E4F99 /* ViewController.swift in Sources */,
 				CE5EA83825E26338000E4F99 /* AppDelegate.swift in Sources */,
 				CE5EA83A25E26338000E4F99 /* SceneDelegate.swift in Sources */,
+				7E631B2D25E2793400580285 /* IMTViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
