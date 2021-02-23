@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1170" y="-58"/>
         </scene>
-        <!--CalorieCalculationViewController-->
+        <!--calorieСalculation-->
         <scene sceneID="FKU-lY-Urr">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="calorieStoryboard" storyboardName="CalorieCalculationViewController" id="kiq-Ao-pSb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="calorieStoryboard" storyboardName="calorieСalculation" id="kiq-Ao-pSb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qok-Sl-z3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1252" y="378"/>
