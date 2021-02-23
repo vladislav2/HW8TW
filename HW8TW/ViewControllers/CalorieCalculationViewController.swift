@@ -33,22 +33,7 @@ class CalorieCalculationViewController: UIViewController {
   }
   
   @IBAction func calculateButtonPressed() {
-    //resultLabel.text = СalculationManager().calculateСalories(gender: genderSegmentedControl.selectedSegmentIndex, weight: Double(weightTextField.text ?? "1") ?? 1, height: Double(heightTextField.text ?? "1") ?? 1, age: Double(ageTextField.text ?? "1") ?? 1, activity: activity).1
-    if genderSegmentedControl.selectedSegmentIndex == 0 {
-      let height = Double(heightTextField.text ?? "1") ?? 1
-      let weight = Double(weightTextField.text ?? "1") ?? 1
-      let age = Double(ageTextField.text ?? "1") ?? 1
-      let resultMale = 88.36 + (4.8 * height) + (13.4 * weight) - (5.7 * age)
-      result = Int(resultMale * activity)
-      resultLabel.text = String(result)
-    } else {
-      let height = Double(heightTextField.text ?? "1") ?? 1
-      let weight = Double(weightTextField.text ?? "1") ?? 1
-      let age = Double(ageTextField.text ?? "1") ?? 1
-      let resultFemale = 447.6 + (3.1 * height) + (9.2 * weight) - (4.3 * age)
-      result = Int(resultFemale * activity)
-      resultLabel.text = String(result)
-    }
+    resultLabel.text = СalculationManager().calculateСalories(gender: genderSegmentedControl.selectedSegmentIndex, weight: weightTextField.text ?? "1", height: heightTextField.text ?? "1", age: ageTextField.text ?? "1", activity: activity)
   }
 }
 
