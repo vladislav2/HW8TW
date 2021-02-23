@@ -47,7 +47,7 @@
                                             <color key="titleColor" red="0.22425979027379461" green="0.23128219974150666" blue="0.7222141304401436" alpha="0.89803921568627454" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="kiq-Ao-pSb" kind="presentation" modalPresentationStyle="fullScreen" id="yWh-Oc-ArV"/>
+                                            <segue destination="kiq-Ao-pSb" kind="presentation" modalPresentationStyle="automatic" id="yWh-Oc-ArV"/>
                                         </connections>
                                     </button>
                                 </subviews>

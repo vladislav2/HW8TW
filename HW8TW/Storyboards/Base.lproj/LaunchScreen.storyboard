@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health asistent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekk-il-km7">
-                                <rect key="frame" x="15.5" y="255" width="289.5" height="58"/>
+                                <rect key="frame" x="14" y="255" width="292" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.48032560789123591" blue="0.21593070621273747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ekk-il-km7" secondAttribute="height" multiplier="181:36" id="a6l-sY-ypS"/>
